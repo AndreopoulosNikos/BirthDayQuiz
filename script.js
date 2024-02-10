@@ -34,9 +34,9 @@ questions.set("question3", {
 questions.set("question4", {
   q: "When Olga argues with a senior coworker, what does she do?",
   a1: "Nothing",
-  a2: "Prays to our Lord and Savior Jesus",
+  a2: "Cry like a baby",
   a3: "Punch him/her in the face",
-  a4: "Cry like a baby",
+  a4: "Prays to our Lord and Savior Jesus",
   correct: "Cry like a baby",
 });
 
