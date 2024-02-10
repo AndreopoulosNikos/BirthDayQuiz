@@ -44,18 +44,26 @@ function checkAnswer(clickedButton) {
   const selectedAnswer =
     clickedButton.currentTarget.querySelector("p").textContent;
   if (selectedAnswer === questions.get("question" + questionNumber).correct) {
+    questions.get("question" + questionNumber).correct = "Checked";
     document.querySelector("#pic h2").style.display = "none";
     document.querySelector("#pic p").style.display = "none";
     document.querySelector("#pic img").style.display = "block";
-    if (questionNumber == 3) {
-      happyBirthDay();
+    if (questionNumber == questions.size) {
+      winGame();
     } else {
       document.querySelector("#answers h2").textContent = "Correct Answer!!!";
       audio.play();
       setTimeout(setQuestion, 5000);
     }
-  } else {
+  } else if (
+    document.querySelector("#answers h2").textContent === "Choose an answer!!!"
+  ) {
     document.querySelector("#answers h2").textContent = "Wrong Answer.. Wtf???";
+  } else if (
+    document.querySelector("#answers h2").textContent == "Correct Answer!!!"
+  ) {
+    document.querySelector("#answers h2").textContent =
+      "Stop Clicking Asshole!";
   }
 }
 //function to set questions and reset
@@ -86,7 +94,7 @@ function setQuestion() {
   document.querySelector("#answers h2").textContent = "Choose an answer!!!";
 }
 
-function happyBirthDay() {
+function winGame() {
   document.querySelector("#b1 p").textContent = "Happy";
   document.querySelector("#b2 p").textContent = "Birthday";
   document.querySelector("#b3 p").textContent = "To";
