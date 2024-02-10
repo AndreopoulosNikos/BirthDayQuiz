@@ -23,7 +23,7 @@ questions.set("question2", {
 });
 
 questions.set("question3", {
-  q: "How many hours a day Olga Work?",
+  q: "How many hours a day Olga works?",
   a1: "8 Hours",
   a2: "6 Hours",
   a3: "Do you mean the time between my smoking breaks?",
