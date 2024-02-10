@@ -126,13 +126,13 @@ function winGame() {
 
   setTimeout(() => {
     document.querySelector("#pic img").src = "Images/Image6.png";
-  }, 3000);
+  }, 4000);
   setTimeout(() => {
     document.querySelector("#pic img").src = "Images/Image7.png";
-  }, 6000);
+  }, 8000);
   setTimeout(() => {
     document.querySelector("#pic img").src = "Images/Image8.png";
-  }, 9000);
+  }, 12000);
 }
 
 setQuestion();
