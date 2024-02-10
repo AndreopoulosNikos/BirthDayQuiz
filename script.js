@@ -23,6 +23,24 @@ questions.set("question2", {
 });
 
 questions.set("question3", {
+  q: "How many hours a day Olga Work?",
+  a1: "8 Hours",
+  a2: "6 Hours",
+  a3: "Do you mean the time between my smoking breaks?",
+  a4: "Lol! What is work?",
+  correct: "Do you mean the time between my smoking breaks?",
+});
+
+questions.set("question4", {
+  q: "When Olga argues with a senior coworker, what does she do?",
+  a1: "Nothing",
+  a2: "Argues back",
+  a3: "Punch him/her in the face",
+  a4: "Cry like a baby",
+  correct: "Cry like a baby",
+});
+
+questions.set("question5", {
   q: "When is Olga's Birthday?",
   a1: "16 Jan",
   a2: "27 Oct",
@@ -53,12 +71,12 @@ function checkAnswer(clickedButton) {
     } else {
       document.querySelector("#answers h2").textContent = "Correct Answer!!!";
       audio.play();
-      setTimeout(setQuestion, 5000);
+      setTimeout(setQuestion, 7000);
     }
   } else if (
     document.querySelector("#answers h2").textContent === "Choose an answer!!!"
   ) {
-    document.querySelector("#answers h2").textContent = "Wrong Answer.. Wtf???";
+    document.querySelector("#answers h2").textContent = "Wrong Answer...";
   } else if (
     document.querySelector("#answers h2").textContent == "Correct Answer!!!"
   ) {
@@ -66,6 +84,7 @@ function checkAnswer(clickedButton) {
       "Stop Clicking Asshole!";
   }
 }
+
 //function to set questions and reset
 function setQuestion() {
   questionNumber++;
@@ -100,10 +119,20 @@ function winGame() {
   document.querySelector("#b3 p").textContent = "To";
   document.querySelector("#b4 p").textContent = "You!";
   document.querySelector("#answers h2").textContent = "🎊Happy Birthday🎂";
-  document.querySelector("#pic img").src = "Images/Image3.png";
+  document.querySelector("#pic img").src = "Images/Image5.png";
 
-  audio.src = "Sounds/Audio3.mp3";
+  audio.src = "Sounds/Audio5.mp3";
   audio.play();
+
+  setTimeout(() => {
+    document.querySelector("#pic img").src = "Images/Image6.png";
+  }, 3000);
+  setTimeout(() => {
+    document.querySelector("#pic img").src = "Images/Image7.png";
+  }, 6000);
+  setTimeout(() => {
+    document.querySelector("#pic img").src = "Images/Image8.png";
+  }, 9000);
 }
 
 setQuestion();
