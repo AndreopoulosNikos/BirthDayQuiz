@@ -61,14 +61,14 @@ for (const button of answerButtons) {
 answerButtons.forEach((button) => {
   button.addEventListener("touchend", function () {
     button.style.backgroundColor = "#f87ec5";
-    button.style.color = "white";
+    button.querySelector("p").style.color = "white";
   });
 });
 
 answerButtons.forEach((button) => {
   button.addEventListener("touchstart", function () {
     button.style.backgroundColor = "#d7fad4";
-    button.style.color = "#785f6d";
+    button.querySelector("p").style.color = "#785f6d";
   });
 });
 
