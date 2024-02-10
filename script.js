@@ -58,10 +58,26 @@ for (const button of answerButtons) {
   button.addEventListener("click", checkAnswer);
 }
 
+answerButtons.forEach((button) => {
+  button.addEventListener("touchend", function () {
+    button.style.backgroundColor = "#f87ec5";
+    button.style.color = "white";
+  });
+});
+
+answerButtons.forEach((button) => {
+  button.addEventListener("touchstart", function () {
+    button.style.backgroundColor = "#d7fad4";
+    button.style.color = "#785f6d";
+  });
+});
+
 function checkAnswer(clickedButton) {
   const selectedAnswer =
     clickedButton.currentTarget.querySelector("p").textContent;
   if (selectedAnswer === questions.get("question" + questionNumber).correct) {
+    clickedButton.currentTarget.style.backgroundColor = "#d7fad4";
+    clickedButton.currentTarget.querySelector("p").style.color = "#785f6d";
     questions.get("question" + questionNumber).correct = "Checked";
     document.querySelector("#pic h2").style.display = "none";
     document.querySelector("#pic p").style.display = "none";
@@ -88,6 +104,10 @@ function checkAnswer(clickedButton) {
 //function to set questions and reset
 function setQuestion() {
   questionNumber++;
+  answerButtons.forEach((button) => {
+    button.style.backgroundColor = "#f87ec5";
+    button.querySelector("p").style.color = "white";
+  });
   audio.src = "Sounds/Audio" + questionNumber + ".mp3";
   document.querySelector("#pic img").src =
     "Images/Image" + questionNumber + ".png";
@@ -114,6 +134,10 @@ function setQuestion() {
 }
 
 function winGame() {
+  answerButtons.forEach((button) => {
+    button.style.backgroundColor = "#f87ec5";
+    button.querySelector("p").style.color = "white";
+  });
   document.querySelector("#b1 p").textContent = "Happy";
   document.querySelector("#b2 p").textContent = "Birthday";
   document.querySelector("#b3 p").textContent = "To";
