@@ -110,7 +110,7 @@ function setQuestion() {
   });
   audio.src = "Sounds/Audio" + questionNumber + ".mp3";
   document.querySelector("#pic img").src =
-    "Images/Image" + questionNumber + ".png";
+    "Images/Image" + questionNumber + ".jpg";
   document.querySelector("#pic h2").style.display = "block";
   document.querySelector("#pic p").style.display = "block";
   document.querySelector("#pic img").style.display = "none";
@@ -143,19 +143,19 @@ function winGame() {
   document.querySelector("#b3 p").textContent = "To";
   document.querySelector("#b4 p").textContent = "You!";
   document.querySelector("#answers h2").textContent = "🎊Happy Birthday🎂";
-  document.querySelector("#pic img").src = "Images/Image5.png";
+  document.querySelector("#pic img").src = "Images/Image5.jpg";
 
   audio.src = "Sounds/Audio5.mp3";
   audio.play();
 
   setTimeout(() => {
-    document.querySelector("#pic img").src = "Images/Image6.png";
+    document.querySelector("#pic img").src = "Images/Image6.jpg";
   }, 4000);
   setTimeout(() => {
-    document.querySelector("#pic img").src = "Images/Image7.png";
+    document.querySelector("#pic img").src = "Images/Image7.jpg";
   }, 8000);
   setTimeout(() => {
-    document.querySelector("#pic img").src = "Images/Image8.png";
+    document.querySelector("#pic img").src = "Images/Image8.jpg";
   }, 12000);
 }
 
