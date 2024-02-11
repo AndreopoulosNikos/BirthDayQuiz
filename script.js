@@ -60,24 +60,36 @@ for (const button of answerButtons) {
 
 answerButtons.forEach((button) => {
   button.addEventListener("touchend", function () {
-    button.style.backgroundColor = "#f87ec5";
-    button.querySelector("p").style.color = "white";
+    button.classList.remove("hover_button");
+    console.log("touchend");
   });
 });
 
 answerButtons.forEach((button) => {
   button.addEventListener("touchstart", function () {
-    button.style.backgroundColor = "#d7fad4";
-    button.querySelector("p").style.color = "#785f6d";
+    button.classList.add("hover_button");
   });
 });
+
+// answerButtons.forEach((button) => {
+//   button.addEventListener("mouseover", function () {
+//     button.classList.add("hover_button");
+//     console.log("mouseadd");
+//   });
+// });
+
+// answerButtons.forEach((button) => {
+//   button.addEventListener("mouseout", function () {
+//     button.classList.remove("hover_button");
+//     console.log("mouse");
+//   });
+// });
 
 function checkAnswer(clickedButton) {
   const selectedAnswer =
     clickedButton.currentTarget.querySelector("p").textContent;
   if (selectedAnswer === questions.get("question" + questionNumber).correct) {
-    clickedButton.currentTarget.style.backgroundColor = "#d7fad4";
-    clickedButton.currentTarget.querySelector("p").style.color = "#785f6d";
+    clickedButton.currentTarget.classList.add("hover_button");
     questions.get("question" + questionNumber).correct = "Checked";
     document.querySelector("#pic h2").style.display = "none";
     document.querySelector("#pic p").style.display = "none";
@@ -105,8 +117,7 @@ function checkAnswer(clickedButton) {
 function setQuestion() {
   questionNumber++;
   answerButtons.forEach((button) => {
-    button.style.backgroundColor = "#f87ec5";
-    button.querySelector("p").style.color = "white";
+    button.classList.remove("hover_button");
   });
   audio.src = "Sounds/Audio" + questionNumber + ".mp3";
   document.querySelector("#pic img").src =
@@ -135,8 +146,7 @@ function setQuestion() {
 
 function winGame() {
   answerButtons.forEach((button) => {
-    button.style.backgroundColor = "#f87ec5";
-    button.querySelector("p").style.color = "white";
+    button.classList.remove("hover_button");
   });
   document.querySelector("#b1 p").textContent = "Happy";
   document.querySelector("#b2 p").textContent = "Birthday";
