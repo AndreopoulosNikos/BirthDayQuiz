@@ -138,9 +138,14 @@ h2 {
     width: var(--initialSize);
     opacity: 0;
   }
+
+  50% {
+    width: var(35vw);
+    opacity: 1;
+  }
   80% {
     width: var(--finalSize);
-    opacity: 1;
+    opacity: 0.1;
   }
   85% {
     width: var(--finalSize);
@@ -155,7 +160,7 @@ h2 {
 .firework {
   --initialSize: 5vw; /* Adjusted size */
   --finalSize: 80vw; /* Adjusted size */
-  --particleSize: 2vw; /* Adjusted size */
+  --particleSize: 1.5vw; /* Adjusted size */
   --color1: #ee4d4d;
   --color2: #ed4cad;
   --color3: #ed684c;
