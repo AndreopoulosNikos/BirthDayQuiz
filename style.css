@@ -131,11 +131,10 @@ h2 {
 /*Fireworks animation. Not my code*/
 @keyframes firework {
   0% {
-    transform: translate(var(--x), var(--initialY));
     width: var(--initialSize);
-    opacity: 1;
+    opacity: 0;
   }
-  50% {
+  2% {
     width: 5vw; /* Adjusted size */
     opacity: 1;
   }
@@ -147,7 +146,7 @@ h2 {
 
 .firework {
   --initialSize: 5vw; /* Adjusted size */
-  --finalSize: 60vw; /* Adjusted size */
+  --finalSize: 80vw; /* Adjusted size */
   --particleSize: 2vw; /* Adjusted size */
   --color1: #ee4d4d;
   --color2: #ed4cad;
@@ -155,15 +154,10 @@ h2 {
   --color4: #dc4ced;
   --color5: #ed844c;
   --color6: #ed9b9b;
-  --y: -35vh; /* Adjusted positioning */
-  --x: -50%;
-  --initialY: 20vw; /* Adjusted positioning */
   content: "";
   animation: firework 3s infinite; /* Adjusted duration */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, var(--y));
+  transform: translate(-50%, -50%);
   width: var(--initialSize);
   aspect-ratio: 1;
   background: radial-gradient(
