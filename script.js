@@ -26,18 +26,18 @@ questions.set("question3", {
   q: "How many hours a day Olga works?",
   a1: "8 Hours",
   a2: "6 Hours",
-  a3: "Do you mean the time between my smoking breaks?",
+  a3: "Do you mean the time between her smoking breaks?",
   a4: "Lol! What is work?",
-  correct: "Do you mean the time between my smoking breaks?",
+  correct: "Do you mean the time between her smoking breaks?",
 });
 
 questions.set("question4", {
   q: "When Olga argues with a senior coworker, what does she do?",
   a1: "Nothing",
-  a2: "Cry like a baby",
-  a3: "Punch him/her in the face",
+  a2: "Cries like a baby",
+  a3: "Punches him/her in the face",
   a4: "Prays to our Lord and Savior Jesus",
-  correct: "Cry like a baby",
+  correct: "Cries like a baby",
 });
 
 questions.set("question5", {
