@@ -152,6 +152,7 @@ function winGame() {
   document.querySelector("#b3 p").textContent = "To";
   document.querySelector("#b4 p").textContent = "You!";
   document.querySelector("#answers h2").textContent = "🎊Happy Birthday🎂";
+  document.querySelector("#answers h2").classList.add("win_animation");
   document.querySelector("#pic img").src = "Images/Image5.jpg";
 
   audio.src = "Sounds/Audio5.mp3";

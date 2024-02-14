@@ -98,3 +98,31 @@ h2 {
   color: #785f6d;
   background-color: #d7fad4;
 }
+
+#answers h2.win_animation {
+  animation: rainbow 5s infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    color: #ff0000; /* Red */
+  }
+  16.67% {
+    color: #ff9900; /* Orange */
+  }
+  33.33% {
+    color: #ffff00; /* Yellow */
+  }
+  50% {
+    color: #33cc33; /* Green */
+  }
+  66.67% {
+    color: #3399ff; /* Blue */
+  }
+  83.33% {
+    color: #9900cc; /* Purple */
+  }
+  100% {
+    color: #ff0000; /* Back to Red */
+  }
+}
