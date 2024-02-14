@@ -61,7 +61,6 @@ for (const button of answerButtons) {
 answerButtons.forEach((button) => {
   button.addEventListener("touchend", function () {
     button.classList.remove("hover_button");
-    console.log("touchend");
   });
 });
 
