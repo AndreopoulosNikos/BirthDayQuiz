@@ -134,19 +134,15 @@ h2 {
     width: var(--initialSize);
     opacity: 0;
   }
-  2% {
+  10% {
     width: var(--initialSize);
     opacity: 0;
   }
-  4% {
-    width: 5vw;
-    opacity: 1;
-  }
-  96% {
+  70% {
     width: var(--finalSize);
     opacity: 1;
   }
-  98% {
+  85% {
     width: var(--finalSize);
     opacity: 0;
   }
