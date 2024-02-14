@@ -36,6 +36,7 @@ h1 {
   border: #f7e77e solid 5px;
   border-radius: 20px;
   text-align: center;
+  max-height: 250px;
 }
 
 img {
@@ -96,4 +97,4 @@ h2 {
 .hover_button {
   color: #785f6d;
   background-color: #d7fad4;
-} st
+}
