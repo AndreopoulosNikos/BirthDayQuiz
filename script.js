@@ -48,6 +48,7 @@ questions.set("question5", {
   a4: "06 Apr",
   correct: "06 Apr",
 });
+
 //question counter
 let questionNumber = 0;
 
@@ -84,6 +85,7 @@ answerButtons.forEach((button) => {
 //   });
 // });
 
+//Check answer based on choice
 function checkAnswer(clickedButton) {
   const selectedAnswer =
     clickedButton.currentTarget.querySelector("p").textContent;
@@ -143,10 +145,30 @@ function setQuestion() {
   document.querySelector("#answers h2").textContent = "Choose an answer!!!";
 }
 
+//Add fireworks
+function createFirework() {
+  const container = document.querySelector("#fireworks-container");
+
+  for (let i = 0; i < 6; i++) {
+    const firework = document.createElement("div");
+    firework.classList.add("firework");
+
+    // Set random position within the container
+    const xPos = Math.random() * container.clientWidth;
+    const yPos = Math.random() * container.clientHeight;
+
+    firework.style.left = xPos + "px";
+    firework.style.top = yPos + "px";
+    container.appendChild(firework);
+  }
+}
+
+// Win game function
 function winGame() {
   answerButtons.forEach((button) => {
     button.classList.remove("hover_button");
   });
+  createFirework();
   document.querySelector("#b1 p").textContent = "Happy";
   document.querySelector("#b2 p").textContent = "Birthday";
   document.querySelector("#b3 p").textContent = "To";

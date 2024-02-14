@@ -99,6 +99,7 @@ h2 {
   background-color: #d7fad4;
 }
 
+/*Win title animation*/
 #answers h2.win_animation {
   animation: rainbow 5s infinite;
 }
@@ -125,4 +126,82 @@ h2 {
   100% {
     color: #ff0000; /* Back to Red */
   }
+}
+
+/*Fireworks animation. Not my code*/
+@keyframes firework {
+  0% {
+    transform: translate(var(--x), var(--initialY));
+    width: var(--initialSize);
+    opacity: 1;
+  }
+  50% {
+    width: 2vmin; /* Adjusted size */
+    opacity: 1;
+  }
+  100% {
+    width: var(--finalSize);
+    opacity: 0;
+  }
+}
+
+.firework {
+  --initialSize: 2vmin; /* Adjusted size */
+  --finalSize: 100vmin; /* Adjusted size */
+  --particleSize: 1vmin; /* Adjusted size */
+  --color1: #ee4d4d;
+  --color2: #ed4cad;
+  --color3: #ed684c;
+  --color4: #dc4ced;
+  --color5: #ed844c;
+  --color6: #ed9b9b;
+  --y: -50vmin;
+  --x: -50%;
+  --initialY: 80vmin;
+  content: "";
+  animation: firework 3s infinite; /* Adjusted duration */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, var(--y));
+  width: var(--initialSize);
+  aspect-ratio: 1;
+  background: radial-gradient(
+        circle,
+        var(--color1) var(--particleSize),
+        #0000 0
+      )
+      50% 0%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 50%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 50% 100%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 0% 50%,
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 80% 90%,
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 95% 90%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 90% 70%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 60%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 55% 80%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 70% 77%,
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 22% 90%,
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 45% 90%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 70%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 10% 60%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 31% 80%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 28% 77%,
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 13% 72%,
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 80% 10%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 95% 14%,
+    radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 90% 23%,
+    radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 100% 43%,
+    radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 85% 27%,
+    radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 77% 37%,
+    radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 60% 7%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 22% 14%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 45% 20%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 34%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 10% 29%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 31% 37%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 28% 7%,
+    radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 13% 42%;
+  background-size: var(--initialSize) var(--initialSize);
+  background-repeat: no-repeat;
 }
