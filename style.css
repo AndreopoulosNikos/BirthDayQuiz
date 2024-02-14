@@ -135,11 +135,15 @@ h2 {
     opacity: 0;
   }
   2% {
-    width: 5vw; /* Adjusted size */
+    width: 5vw;
     opacity: 1;
   }
-  100% {
+  98% {
     width: var(--finalSize);
+    opacity: 0;
+  }
+  100% {
+    width: var(--initialSize);
     opacity: 0;
   }
 }
