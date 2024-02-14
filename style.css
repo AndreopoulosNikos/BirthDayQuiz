@@ -2,7 +2,7 @@ body {
   background-color: #f87ec5;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  height: 90vh;
+  height: 90dvh;
   margin: 0;
 }
 
@@ -48,7 +48,7 @@ img {
 }
 
 h2 {
-  margin-top: 3%;
+  margin-top: 2%;
   font-family: "Protest Riot", sans-serif;
   color: #000;
   text-decoration: underline;
