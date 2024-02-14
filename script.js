@@ -120,7 +120,6 @@ function setQuestion() {
   answerButtons.forEach((button) => {
     button.classList.remove("hover_button");
   });
-  createFirework();
   audio.src = "Sounds/Audio" + questionNumber + ".mp3";
   document.querySelector("#pic img").src =
     "Images/Image" + questionNumber + ".jpg";
