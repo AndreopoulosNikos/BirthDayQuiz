@@ -136,7 +136,7 @@ h2 {
     opacity: 1;
   }
   50% {
-    width: 2vmin; /* Adjusted size */
+    width: 5vw; /* Adjusted size */
     opacity: 1;
   }
   100% {
@@ -146,18 +146,18 @@ h2 {
 }
 
 .firework {
-  --initialSize: 2vmin; /* Adjusted size */
-  --finalSize: 100vmin; /* Adjusted size */
-  --particleSize: 1vmin; /* Adjusted size */
+  --initialSize: 5vw; /* Adjusted size */
+  --finalSize: 60vw; /* Adjusted size */
+  --particleSize: 2vw; /* Adjusted size */
   --color1: #ee4d4d;
   --color2: #ed4cad;
   --color3: #ed684c;
   --color4: #dc4ced;
   --color5: #ed844c;
   --color6: #ed9b9b;
-  --y: -50vmin;
+  --y: -35vh; /* Adjusted positioning */
   --x: -50%;
-  --initialY: 80vmin;
+  --initialY: 20vw; /* Adjusted positioning */
   content: "";
   animation: firework 3s infinite; /* Adjusted duration */
   position: absolute;
