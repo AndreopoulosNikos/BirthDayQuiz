@@ -138,7 +138,7 @@ h2 {
     width: var(--initialSize);
     opacity: 0;
   }
-  70% {
+  80% {
     width: var(--finalSize);
     opacity: 1;
   }
