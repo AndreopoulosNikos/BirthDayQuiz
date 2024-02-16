@@ -189,6 +189,24 @@ function winGame() {
   setTimeout(() => {
     document.querySelector("#pic img").src = "Images/Image8.jpg";
   }, 9000);
+
+  let counter = 1;
+  setInterval(() => {
+    if (counter == 1) {
+      document.querySelector("#b4").classList.remove("hover_button");
+    } else {
+      document
+        .querySelector("#b" + (counter - 1))
+        .classList.remove("hover_button");
+    }
+    document.querySelector("#b" + counter).classList.add("hover_button");
+
+    if (counter == 4) {
+      counter = 1;
+    } else {
+      counter++;
+    }
+  }, 1000);
 }
 
 setQuestion();
